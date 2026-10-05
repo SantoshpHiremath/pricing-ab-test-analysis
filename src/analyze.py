@@ -16,10 +16,9 @@ it after peeking at results is a well-known way to fool yourself).
 Because two metrics are tested, this module also applies a Bonferroni
 correction to the significance threshold rather than reporting each
 p-value against the naive alpha=0.05 -- a real, if simple, multiple-
-comparisons correction that's honestly disclosed as basic (a more
-sophisticated experimentation platform might use a stricter or
-sequential correction) rather than passed off as more rigorous than it
-is.
+comparisons correction that is basic by design (a larger
+experimentation platform might use a stricter or sequential
+correction).
 """
 
 from __future__ import annotations
@@ -134,7 +133,7 @@ def minimum_detectable_effect(n_per_group: int, base_rate: float, power: float =
     The smallest absolute conversion-rate lift this experiment's actual
     sample size (n_per_group) could reliably detect at the given power
     and alpha -- computed BEFORE looking at the observed effect, so it
-    can be reported alongside the result as an honest statement of what
+    can be reported alongside the result as a clear statement of what
     this experiment was even capable of finding. A statistically
     "non-significant" result with a large minimum-detectable-effect is a
     genuinely different, weaker finding than one with a small MDE, and

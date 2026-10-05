@@ -5,19 +5,17 @@ simulate.py
 Generates synthetic pricing-experiment data: a control group (current
 price) and a treatment group (a test price variant), with per-visitor
 booking outcomes and, for bookings, a realistic price/revenue value --
-built to close a specific gap for Limehome's "Working Student Data
-Scientist" posting, whose core distinctive ask (not covered by any
-other project in this portfolio) is "support the design and analysis of
-experiments to measure the impact of pricing and product initiatives."
+to support the design and analysis of experiments that measure the
+impact of pricing and product initiatives. The data is synthetic.
 
-Two honest scenarios are provided, not just one flattering one:
+Two scenarios are provided:
 
 - `simulate_experiment(..., true_effect=...)` with a nonzero effect --
   a genuine, if modest, conversion-rate lift from the treatment price.
 - `simulate_experiment(..., true_effect=0.0)` -- a true null effect, so
   the analysis code in analyze.py can be tested against a case where
-  the honest, correct conclusion is "no significant difference," not
-  just against a pre-built win.
+  the correct conclusion is "no significant difference," not just
+  against a pre-built win.
 """
 
 from __future__ import annotations

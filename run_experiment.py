@@ -3,7 +3,7 @@ run_experiment.py
 ------------------
 
 Entry point: runs a full pricing A/B test simulation and analysis end
-to end, printing an honest, plain-language report. Run twice with
+to end, printing a plain-language report. Run twice with
 different true_effect values to see both a genuine-effect case and a
 true-null case handled correctly.
 """

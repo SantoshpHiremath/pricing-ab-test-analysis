@@ -3,10 +3,9 @@ report.py
 ---------
 
 Turns an ExperimentAnalysis into a plain-language summary report --
-directly addressing the posting's "build visualizations and reports
-that communicate insights clearly to technical and non-technical
-stakeholders." Reports the honest result either way: a real, disclosed
-null/non-significant outcome is reported as such, not reframed as a
+reports that communicate insights clearly to technical and
+non-technical stakeholders. The result is reported as it is either way:
+a null/non-significant outcome is reported as such, not reframed as a
 win, and the minimum-detectable-effect is always stated so a reader can
 judge whether "not significant" means "no effect" or "this experiment
 wasn't big enough to tell."
@@ -59,7 +58,7 @@ def format_report(analysis: ExperimentAnalysis, control_price: float, treatment_
         lines.append("   -> NOT statistically significant at the corrected threshold.")
     lines.append("")
 
-    lines.append("3. HONEST BOTTOM LINE")
+    lines.append("3. BOTTOM LINE")
     if conv.significant_at_corrected_alpha and not rev.significant_at_corrected_alpha:
         lines.append("   The treatment price drove significantly more bookings, but the effect on")
         lines.append("   revenue per visitor was not statistically significant at this sample size.")
